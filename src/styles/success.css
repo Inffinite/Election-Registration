@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "SF";
+    src: url('../../fonts/sfprodisplay-bold-webfont.woff');
+}
+
+@font-face {
+    font-family: "SF-R";
+    src: url('../../fonts/sfprodisplay-regular-webfont.woff');
+}
+
+@import './colors.css';
+
+@media only screen {
+    .success {
+        background-color: var(--background);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .s-title {
+        margin-top: 50px;
+        text-align: start;
+        color: var(--grey-lighter);
+        font-size: 25px;
+        font-family: 'SF';
+    }
+
+    .s-subtitle {
+        font-family: 'SF-R';
+        margin-top: 5px;
+        color: var(--grey-light);
+        text-align: start;
+    }
+
+    .s-content {
+        margin: 50px 20px 0px 20px;
+    }
+
+    span {
+        color: var(--green);
+    }
+
+    .user {
+        margin-top: 30px;
+        padding: 10px 0px 10px 0px;
+        border-radius: 8px;
+        background-color: var(--grey);
+    }
+
+    .s-label {
+        padding: 0px 10px 0px 10px;
+        font-size: 16px;
+        color: var(--grey-light);
+        font-family: 'SF-R';
+        text-align: start;
+    }
+
+    .s-value {
+        padding: 0px 10px 0px 10px;
+        font-size: 20px;
+        color: var(--grey-lighter);
+        font-family: 'SF';
+        text-align: start;
+    }
+
+    .invalid {
+        color: var(--red);
+        font-family: 'SF-R';
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    .success {
+        background-color: var(--background);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .s-title {
+        margin-top: 50px;
+        text-align: start;
+        color: var(--grey-lighter);
+        font-size: 25px;
+        font-family: 'SF';
+    }
+
+    .s-subtitle {
+        font-family: 'SF-R';
+        margin-top: 5px;
+        color: var(--grey-light);
+        text-align: start;
+    }
+
+    .s-content {
+        margin: 50px 180px 0px 180px;
+    }
+
+    span {
+        color: var(--green);
+    }
+
+    .user {
+        margin-top: 30px;
+        padding: 10px 0px 10px 0px;
+        border-radius: 8px;
+        background-color: var(--grey);
+    }
+
+    .s-label {
+        padding: 0px 10px 0px 10px;
+        font-size: 16px;
+        color: var(--grey-light);
+        font-family: 'SF-R';
+        text-align: start;
+    }
+
+    .s-value {
+        padding: 0px 10px 0px 10px;
+        font-size: 20px;
+        color: var(--grey-lighter);
+        font-family: 'SF';
+        text-align: start;
+    }
+
+    .invalid {
+        color: var(--red);
+        font-family: 'SF-R';
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 64.063em) {
+    .success {
+        background-color: var(--background);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .s-title {
+        margin-top: 50px;
+        text-align: start;
+        color: var(--grey-lighter);
+        font-size: 35px;
+        font-family: 'SF';
+    }
+
+    .s-subtitle {
+        font-family: 'SF-R';
+        margin-top: 5px;
+        color: var(--grey-light);
+        text-align: start;
+        font-size: 18px;
+    }
+
+    .s-content {
+        margin: 150px 420px 0px 420px;
+    }
+
+    span {
+        color: var(--green);
+    }
+
+    .user {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 20px 0px 20px 0px;
+        border-radius: 8px;
+        background-color: var(--grey);
+    }
+
+    .s-label {
+        padding: 0px 20px 0px 20px;
+        font-size: 16px;
+        color: var(--grey-light);
+        font-family: 'SF-R';
+        text-align: start;
+    }
+
+    .s-value {
+        padding: 0px 20px 0px 20px;
+        font-size: 20px;
+        color: var(--grey-lighter);
+        font-family: 'SF';
+        text-align: start;
+    }
+
+    .invalid {
+        color: var(--red);
+        font-family: 'SF-R';
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+

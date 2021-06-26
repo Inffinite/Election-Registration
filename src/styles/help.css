@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "SF";
+    src: url('../../fonts/sfprodisplay-bold-webfont.woff');
+}
+
+@font-face {
+    font-family: "SF-R";
+    src: url('../../fonts/sfprodisplay-regular-webfont.woff');
+}
+
+@import './colors.css';
+
+@media only screen {
+    .help {
+        background-color: var(--background);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hp-content {
+        margin: 0px 20px 0px 20px;
+        text-align: start;
+    }
+
+    .hp-title {
+        color: white;
+        font-family: 'SF';
+        font-size: 22px;
+        text-align: start;
+    }
+
+    .hp-subtitle {
+        color: var(--grey-lighter);
+        margin-top: 4px;
+        font-family: 'SF-R';
+        font-size: 18px;
+
+    }
+
+    .hp-number {
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 14px;
+        font-family: 'SF-R';
+        color: var(--green);
+        background-color: var(--grey);
+        text-align: center;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .hp-number:hover {
+        color: var(--grey-lighter)
+    }
+
+    .hp-wh {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+        border-radius: 8px;
+        padding: 14px;
+        font-family: 'SF-R';
+        color: var(--green);
+        background-color: var(--grey);
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+    }
+
+    .hp-wh:hover {
+        color: var(--grey-lighter)
+    }
+
+    .whatsapp-icon {
+        height: 20px;
+    }
+}
