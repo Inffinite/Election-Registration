@@ -1,13 +1,4 @@
-@font-face {
-    font-family: "SF";
-    src: url('../../fonts/sfprodisplay-bold-webfont.woff');
-}
-
-@font-face {
-    font-family: "SF-R";
-    src: url('../../fonts/sfprodisplay-regular-webfont.woff');
-}
-
+@import './font.css';
 @import './colors.css';
 
 @media only screen {
@@ -373,7 +364,7 @@
         font-family: 'SF';
         font-size: 20px;
         /* width: 100%; */
-        padding: 15px 0px 15px 0px;
+        padding: 12px 0px 12px 0px;
         cursor: pointer;
     }
     

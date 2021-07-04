@@ -1,0 +1,189 @@
+@import './font.css';
+@import './colors.css';
+
+@media only screen {
+    .positions {
+        background-color: var(--background);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .p-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background-color: var(--background);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid var(--grey);
+        color: var(--grey-lighter);
+        font-family: 'SF';
+        font-size: 20px;
+    }
+
+    .p-menu {
+        fill: var(--grey-lighter);
+        height: 24px;
+    }
+    
+    .p-content {
+        margin: 20px 20px 0px 20px;
+    }
+
+    .pos {
+        border-radius: 8px;
+        background-color: var(--grey);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 12px;
+        gap: 15px;
+        margin-bottom: 20px;
+        --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .p-icon {
+        border-radius: 50px;
+        background-color: var(--grey);
+        border: 2px solid var(--grey-light);
+        height: 45px;
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .p-ico {
+        fill: var(--grey-lighter);
+        height: 22px;
+    }
+
+    .p-title {
+        font-family: 'SF-R';
+        font-size: 18px;
+        color: var(--grey-lighter);
+        text-align: start;
+    }
+
+    .p-subtitle {
+        margin-top: 8px;
+        border-radius: 20px;
+        color: #01d265;
+        background-color: #01d2662a;
+        text-align: start;
+        padding: 2px 15px 2px 15px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'SF';
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .p-not-voted {
+        margin-top: 8px;
+        border-radius: 20px;
+        color: var(--grey-light);
+        background-color: var(--background);
+        text-align: start;
+        padding: 2px 15px 2px 15px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'SF';
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .p-voted {
+        margin-top: 8px;
+        border-radius: 20px;
+        color: white;
+        background-color: var(--green);
+        text-align: start;
+        padding: 2px 15px 2px 15px;
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'SF';
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .p-user {
+        fill: var(--green);
+        height: 14px;
+    }
+
+    .pos-wr {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pr-menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        backdrop-filter: blur( 20.0px );
+        -webkit-backdrop-filter: blur( 6.0px );
+        padding: 20px;
+    }
+
+    .pr-close {
+        display: flex;
+        align-items: flex-start;
+        align-items: center;
+    }
+
+    .p-close {
+        fill: var(--grey-lighter);
+        height: 18px;
+    }
+
+    .pm-item {
+        background-color: var(--background);
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 20px;
+        display: flex;
+        align-items: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .p-arrow {
+        fill: var(--grey-lighter);
+        height: 20px;
+    }
+
+    .pr-close {
+        color: var(--grey-lighter);
+        font-size: 16px;
+        border-radius: 8px;
+        padding: 10px 20px 10px 20px;
+        background-color: var(--background);
+        font-family: 'SF';
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        gap: 10px;
+    }
+}

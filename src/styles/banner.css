@@ -1,13 +1,4 @@
-@font-face {
-    font-family: "SF";
-    src: url('../../fonts/sfprodisplay-bold-webfont.woff');
-}
-
-@font-face {
-    font-family: "SF-R";
-    src: url('../../fonts/sfprodisplay-regular-webfont.woff');
-}
-
+@import './font.css';
 @import './colors.css';
 
 @media only screen {
@@ -23,94 +14,70 @@
     }
 
     .b-content {
-        margin: 30px 20px 0px 20px;
+        margin: 50px 20px 0px 20px;
     }
 
-    .b-img {
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
+    .vote {
+        border-radius: 6px;
+        padding: 12px;
+        background-color: var(--green);
+        color: white;
+        font-family: 'SF';
+        text-align: center;
+    }
+
+    .code {
+        outline: none;
+        border: 2px solid var(--grey);
+        border-radius: 6px;
+        padding: 14px;
+        width: 89.5%;
+        margin-top: 6px;
+        background-color: var(--grey-background);
+        color: #f7f7f7;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
     .b-title {
-        margin-top: 10px;
-        text-align: start;
-        font-size: 24px;
         font-family: 'SF';
-        color: white;
+        font-size: 24px;
+        color: var(--grey-lighter);
+        margin-bottom: 5px;
     }
 
     .b-subtitle {
-        margin-top: 8px;
-        text-align: start;
-        font-size: 16px;
-        font-family: 'SF-R';
-        color: var(--grey-light);
-    }
-
-    .author {
-        color: var(--green);
-    }
-
-    .stuff {
-        color: var(--grey-lighter);
-        font-size: 18px;
-        line-height: 36px;
-        margin-top: 20px;
-        font-family: 'SF-R';
-    }
-
-    .b-time {
-        border-radius: 50px;
-        padding: 4px 10px 4px 10px;
-        border: 1px solid var(--grey-light);
         font-family: 'SF-R';
         font-size: 14px;
-        margin-top: 10px;
-        width: fit-content;
-        color: var(--green);
+        color: var(--grey-light);
+        margin-bottom: 20px;
     }
 
-    .b-btn {
-        outline: none;
-        border: none;
-        background-color: var(--green);
+    .bc-label {
         font-family: 'SF';
-        border-radius: 6px;
-        padding: 15px;
-        margin-top: 20px;
-        color: white;
-        width: 100%;
+        color: var(--grey-lighter);
         font-size: 16px;
-        cursor: pointer;
+        text-align: start;
     }
 
-    .cn-btn {
-        outline: none;
-        border: none;
-        background-color: transparent;
+    .r-vote {
+        border-radius: 6px;
+        padding: 12px;
+        background-color: var(--grey);
+        color: var(--grey-lighter);
         font-family: 'SF';
+        text-align: center;
+        margin-top: 14px;
+    }
+
+    .r-help {
         border-radius: 6px;
-        padding: 15px;
-        margin-top: 12px;
-        margin-bottom: 30px;
+        padding: 12px;
+        margin-top: 18px;
+        font-family: 'SF-R';
         color: var(--green);
-        width: 100%;
-        font-size: 16px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .cn-icon {
-        fill: var(--green);
-        height: 20px;
-    }
-
-    .r {
-        color: white;
+        font-size: 18px;
+        text-align: center;
     }
 }
 
@@ -126,101 +93,72 @@
         overflow-x: hidden;
     }
 
-    .cn-icon {
-        fill: var(--green);
-        height: 20px;
-    }
-
     .b-content {
-        margin: 30px 140px 0px 140px;
+        margin: 50px 180px 0px 180px;
     }
 
-    .b-img {
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-        height: 300px;
+    .vote {
+        border-radius: 6px;
+        padding: 12px;
+        background-color: var(--green);
+        color: white;
+        font-family: 'SF';
+        text-align: center;
     }
 
-    .cn-icon {
-        fill: var(--green);
-        height: 20px;
+    .code {
+        outline: none;
+        border: 2px solid var(--grey);
+        border-radius: 6px;
+        padding: 14px;
+        width: 89.5%;
+        margin-top: 6px;
+        background-color: var(--grey-background);
+        color: #f7f7f7;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
     .b-title {
-        margin-top: 10px;
-        text-align: start;
-        font-size: 28px;
         font-family: 'SF';
-        color: white;
+        font-size: 24px;
+        color: var(--grey-lighter);
+        margin-bottom: 5px;
     }
 
     .b-subtitle {
-        margin-top: 8px;
-        text-align: start;
-        font-size: 20px;
         font-family: 'SF-R';
+        font-size: 14px;
         color: var(--grey-light);
+        margin-bottom: 20px;
     }
 
-    .author {
-        color: var(--green);
-    }
-
-    .stuff {
+    .bc-label {
+        font-family: 'SF';
         color: var(--grey-lighter);
-        font-size: 22px;
-        line-height: 36px;
-        margin-top: 20px;
-        font-family: 'SF-R';
-    }
-
-    .b-time {
-        border-radius: 50px;
-        padding: 4px 10px 4px 10px;
-        border: 1px solid var(--grey-light);
-        font-family: 'SF-R';
         font-size: 16px;
-        margin-top: 10px;
-        width: fit-content;
-        color: var(--green);
+        text-align: start;
     }
 
-    .b-btn {
-        outline: none;
-        border: none;
-        background-color: var(--green);
-        font-family: 'SF';
+    .r-vote {
         border-radius: 6px;
-        padding: 15px;
-        margin-top: 20px;
-        color: white;
-        width: 100%;
-        font-size: 16px;
+        padding: 12px;
+        background-color: var(--grey);
+        color: var(--grey-lighter);
+        font-family: 'SF';
+        text-align: center;
+        margin-top: 14px;
         cursor: pointer;
     }
 
-    .cn-btn {
-        outline: none;
-        border: none;
-        background-color: transparent;
-        font-family: 'SF';
+    .r-help {
         border-radius: 6px;
-        padding: 15px;
-        margin-top: 12px;
-        margin-bottom: 30px;
+        padding: 12px;
+        margin-top: 18px;
+        font-family: 'SF-R';
         color: var(--green);
-        width: 100%;
-        font-size: 16px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .r {
-        color: white;
+        font-size: 18px;
+        text-align: center;
     }
 }
 
@@ -237,92 +175,66 @@
     }
 
     .b-content {
-        margin: 30px 290px 0px 290px;
+        margin: 150px 400px 0px 400px;
     }
 
-    
-
-    .b-img {
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-        height: 300px;
+    .vote {
+        border-radius: 6px;
+        padding: 12px;
+        background-color: var(--green);
+        color: white;
+        font-family: 'SF';
+        text-align: center;
     }
 
-    .cn-icon {
-        fill: var(--green);
-        height: 20px;
+    .code {
+        outline: none;
+        border: 2px solid var(--grey);
+        border-radius: 6px;
+        padding: 14px;
+        width: 89.5%;
+        margin-top: 6px;
+        background-color: var(--grey-background);
+        color: #f7f7f7;
+        margin-bottom: 20px;
+        font-size: 16px;
     }
 
     .b-title {
-        margin-top: 10px;
-        text-align: start;
-        font-size: 28px;
         font-family: 'SF';
-        color: white;
+        font-size: 30px;
+        color: var(--grey-lighter);
+        margin-bottom: 5px;
     }
 
     .b-subtitle {
-        margin-top: 8px;
-        text-align: start;
-        font-size: 20px;
         font-family: 'SF-R';
+        font-size: 18px;
         color: var(--grey-light);
+        margin-bottom: 18px;
     }
 
-    .author {
-        color: var(--green);
-    }
-
-    .stuff {
+    .bc-label {
+        font-family: 'SF';
         color: var(--grey-lighter);
-        font-size: 22px;
-        line-height: 36px;
-        margin-top: 20px;
-        font-family: 'SF-R';
+        font-size: 20px;
+        text-align: start;
     }
 
-    .b-time {
-        border-radius: 50px;
-        padding: 4px 10px 4px 10px;
-        border: 1px solid var(--grey-light);
-        font-family: 'SF-R';
-        font-size: 16px;
-        margin-top: 10px;
-        width: fit-content;
-        color: var(--green);
-    }
-
-    .b-btn {
-        outline: none;
-        border: none;
-        background-color: var(--green);
-        font-family: 'SF';
+    .r-vote {
         border-radius: 6px;
-        padding: 15px;
-        margin-top: 20px;
-        color: white;
-        width: 100%;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .cn-btn {
-        outline: none;
-        border: none;
-        background-color: transparent;
+        padding: 12px;
+        background-color: var(--grey);
+        color: var(--grey-lighter);
         font-family: 'SF';
-        border-radius: 6px;
-        padding: 15px;
-        margin-top: 12px;
-        margin-bottom: 30px;
-        color: var(--green);
-        width: 100%;
-        font-size: 16px;
+        text-align: center;
+        margin-top: 14px;
         cursor: pointer;
+        transition: 0.5s ease-in-out;
     }
 
-    .r {
+    .r-vote:hover {
+        background-color: rgb(248, 62, 62);
         color: white;
     }
 }

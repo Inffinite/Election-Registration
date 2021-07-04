@@ -40,6 +40,9 @@
       </div>
 
       <button @click="reg" class="r-btn">Continue</button>
+      
+      <div v-if="loading" style="height: 40px;"></div>
+      <Loading v-if="loading"></Loading>
     </div>
   </div>
 </template>
@@ -48,6 +51,7 @@
 import gsap from "gsap";
 import axios from "axios";
 import url from "./url";
+import Loading from './loading.vue'
 
 export default {
   data() {
@@ -59,7 +63,12 @@ export default {
       admiError: "",
       course: 1,
       admission: "",
+      loading: false
     };
+  },
+
+  components: {
+    Loading
   },
 
   watch: {
@@ -87,26 +96,33 @@ export default {
     },
 
     reg() {
-      axios.post(`${url}/checkAdmission`, {
-        admission: this.admission,
-        course: this.course
-      })
-      .then((res) => {
-        console.log(res)
-        this.admissionError(false, "")
+      if (!this.admission) {
+        alert("You must add your admission number");
+      } else {
+        this.loading = true
+        axios
+          .post(`${url}/checkAdmission`, {
+            admission: this.admission,
+            course: this.course,
+          })
+          .then((res) => {
+            console.log(res);
+            this.admissionError(false, "");
 
-        localStorage.setItem('course', this.course)
-        localStorage.setItem('admission', this.admission)
+            localStorage.setItem("course", this.course);
+            localStorage.setItem("admission", this.admission);
+            this.loading = false 
 
-        this.$router.push({
-          name: "Home"
-        });
-      })
-      .catch((e) => {
-        console.log(e)
-        this.admissionError(true, "This admission number is alreay in use")
-      })
-      
+            this.$router.push({
+              name: "Home",
+            });
+          })
+          .catch((e) => {
+            this.loading = false 
+            console.log(e);
+            this.admissionError(true, "This admission number is already in use");
+          });
+      }
     },
 
     async openTab() {

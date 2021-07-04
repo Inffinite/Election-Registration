@@ -18,15 +18,15 @@ const routes = [
   },
 
   {
-    path: '/success',
-    name: 'Success',
-    component: () => import('../components/Success.vue')
-  },
-
-  {
     path: '/help',
     name: 'Help',
     component: () => import('../components/Help.vue')
+  },
+
+  {
+    path: '/positions',
+    name: 'Positions',
+    component: () => import('../components/Positions.vue')
   },
 
   {

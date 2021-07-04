@@ -1,3 +1,3 @@
-const url = 'http://localhost:3000'
+const url = 'https://bifa-election.herokuapp.com'
 
 export default url;

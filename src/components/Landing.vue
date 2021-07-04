@@ -56,6 +56,9 @@
         Register
       </button>
 
+      <div v-if="loading" style="height: 40px;"></div>
+      <Loading v-if="loading"></Loading>
+
       <button @click="help" class="h-btn">Help</button>
     </div>
   </div>
@@ -64,6 +67,7 @@
 <script>
 import axios from "axios";
 import url from "./url";
+import Loading from './loading.vue'
 
 export default {
   name: "HelloWorld",
@@ -76,7 +80,16 @@ export default {
       emailError: "",
       phoneError: "",
       nameError: "",
+      loading: false
     };
+  },
+
+  components: {
+    Loading
+  },
+
+  metaInfo: {
+    title: 'Register',
   },
 
   methods: {
@@ -109,6 +122,7 @@ export default {
         alert("Fill all fields human!");
       } else {
         // email
+        this.loading = true
         axios
           .post(`${url}/checkEmail`, {
             email: this.email,
@@ -116,7 +130,6 @@ export default {
           .then((res) => {
             console.log(res);
             this.emailErr(false);
-
             // phone
             axios
               .post(`${url}/checkPhone`, {
@@ -142,32 +155,39 @@ export default {
                     let a = localStorage.getItem('admission')
                     axios
                       .post(`${url}/users`, {
-                        fname: this.fname,
-                        lname: this.lname,
-                        email: this.email,
+                        fname: this.fname.toLowerCase(),
+                        lname: this.lname.toLowerCase(),
+                        email: this.email.toLowerCase(),
                         phone: this.phone,
                         course: c,
                         admission: a,
                       })
                       .then((res) => {
                         console.log(res.status);
+                        localStorage.setItem('dxx', res.data.code)
+                        this.loading = false
+
                         this.$router.push({ name: 'Success' })
                       })
                       .catch((e) => {
+                        this.loading = false
                         console.log(e);
                       });
                   })
                   .catch((e) => {
+                    this.loading = false
                     console.log(e);
                     this.nameErr(true);
                   });
               })
               .catch((e) => {
+                this.loading = false
                 console.log(e);
                 this.phoneErr(true);
               });
           })
           .catch((e) => {
+            this.loading = false
             console.log(e);
             this.emailErr(true);
           });
